@@ -9,6 +9,7 @@ import Mail from '../components/icons/Mail.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import Form from '../components/Form.astro';
 ---
 
 <Layout 
@@ -53,6 +54,13 @@ import Projects from '../components/Projects.astro';
 				Projects
 			</h2>
 			<Projects />
+		</SectionContainer>
+		<SectionContainer id="contact">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
+				<Mail class="size-4" />
+				Contact
+			</h2>
+			<Form />
 		</SectionContainer>
 	</main>
 </Layout>
