@@ -2,21 +2,58 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Mail from '../components/icons/Mail.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout 
+	title="Karim Barragan - Web Developer | Create Captivating Web and Mobile Apps"
+	description="Enthusiastic junior software developer with a proven track record of creating innovative web applications. Expertise in a variety of technologies, including HTML, CSS, JavaScript, and Ruby on Rails, React, enabling me to build captivating and user-friendly web experiences. Passionate about learning new technologies and eager to contribute to a team of talented developers. Seeking an opportunity to apply my skills and knowledge in a real-world setting.">
 	<main class="flex flex-col items-center justify-center mt-20">
-		<section class="w-2/3 flex items-start flex-col justify-center my-44">
-			<h1 class="text-5xl font-bold inline-flex gap-4">Hey, I'm Karim <a
+		<SectionContainer id="/" class="w-2/3 flex items-start flex-col justify-center my-44">
+			<h1 class="text-5xl font-bold inline-flex gap-4 mb-6">Hey, I'm Karim <a
 				href="https://www.linkedin.com/in/karim-barragan/"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-5xl font-bold inline-flex gap-4"
 				> <Badge>#OpenToWork</Badge></h1> </a>
 			<h2 class="text-3xl inline-flex gap-4"></h2>
-			<p class="text-lg">I'm a Software Developer</p>
-			<p class="text-lg">Curious how a chef became a coder? My secret recipe involves pixels and a sprinkle of Amex magic. Come taste my creations!</p>
-		</section>
+			<p class="text-xl">I'm a Software Developer</p>
+			<p class="text-xl">Curious how a chef became a coder? My secret recipe involves pixels and a sprinkle of Amex magic. Come taste my creations!</p>
+
+			<ul class="flex flex-row gap-x-4 my-3">
+				<li>
+					<SocialPill href="https://www.linkedin.com/in/karim-barragan/">
+						<Linkedin class="size-4" />
+						LinkedIn
+					</SocialPill>
+				</li>
+				<li>
+					<SocialPill href="https://github.com/Rebelzob">
+						<GitHubIcon class="size-4" />
+						GitHub
+					</SocialPill>
+				</li>
+				<li>
+					<SocialPill href="mailto:karimdavidbm@gmail.com">
+						<Mail class="size-4" />
+						karimdavidbm@gmail.com
+					</SocialPill>
+				</li>
+			</ul>
+		</SectionContainer>
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
+				<CodeIcon class="size-4" />
+				Projects
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
 
