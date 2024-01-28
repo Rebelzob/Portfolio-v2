@@ -1,0 +1,130 @@
+---
+const imageAlt = "Karim's photo";
+import JavaScriptIcon from "../components/icons/Javascript.astro";
+import RubyIcon from "../components/icons/Ruby.astro";
+import HtmlIcon from "../components/icons/Html.astro";
+import CssIcon from "../components/icons/Css.astro";
+import ReactIcon from "../components/icons/React.astro";
+import RailsAboutIcon from "../components/icons/RailsAbout.astro";
+import RspecIcon from "../components/icons/Rspec.astro";
+import JestIcon from "../components/icons/Jest.astro";
+import PostgresIcon from "../components/icons/Postgres.astro";
+import GitIcon from "../components/icons/Git.astro";
+import LinuxIcon from "../components/icons/Linux.astro";
+import PostmanIcon from "../components/icons/Postman.astro";
+import BrowserIcon from "../components/icons/Browser.astro";
+import AstroSvgIcon from "../components/icons/AstroSvg.astro";
+---
+<section>
+  <article class="flex flex-col md:flex-row gap-8 justify-center items-center">
+    <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
+    >
+    <p class="text-base">
+      <span class="text-lg text-sky-300/90">Code Chef with a Culinary Twist:</span> <span class="opacity-80">Forget your standard developer drone. I'm a passionate coder with a secret weapon: a culinary arts background. This unique blend gives me laser focus, unflappable pressure handling (think high-heat kitchens!),</span>
+      <strong>
+        and a knack for crafting beautiful, impactful software
+      </strong>.
+    </p>
+    <p class="text-base">
+      <span class="text-lg text-sky-300/90">Problem-Solving Picasso:</span> Years of customer service honed my ability to decipher needs and deliver solutions faster than a seasoned waiter under a Saturday night rush. <strong> This translates to efficient code, clear communication, and projects that exceed expectations</strong>,even when deadlines sizzle.
+    </p>
+    <p class="text-base">
+      <span class="text-lg text-sky-300/90">Team Player Extraordinaire:</span> I'm not just a coding machine, I'm a collaborative catalyst. I thrive in dynamic environments, fostering teamwork, mentoring, and sharing my technical wizardry. 
+      <strong>
+        My ultimate goal? To use my skills and experience to create extraordinary results, together
+      </strong>.
+    </p>
+    <p class="text-base">Want to taste my code alchemy?</p>
+    </div>
+  <img src="/photo.png" class="rounded-full w-64 h-60 order-1 md:order-2" alt={imageAlt}/>
+  </article>
+  <div class="flex justify-center items-center">
+    <a href="#contact" class="bg-white/5
+    border dark:border-white/10 border-gray-300
+    rounded-full
+    inline-flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-base md:text-lg
+    transition
+    hover:scale-110 hover:bg-white/10
+    capitalize
+    ">
+      Let's chat!
+    </a>
+  </div>
+  <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700">
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <div class="flex flex-col mx-auto">
+      <h4 class="mb-2 text-2xl text-center font-semibold text-gray-900 dark:text-white">Languages</h4>
+      <ul class="max-w-md space-y-1 text-gray-500 dark:text-gray-400 text-center">
+        <li class="text-lg">
+          <JavaScriptIcon class="w-4 h-4 inline-block mr-1 " />
+          JavaScript
+        </li>
+        <li class="text-lg">
+          <RubyIcon class="w-4 h-4 inline-block mr-1 " />
+          Ruby
+        </li>
+        <li class="text-lg">
+          <HtmlIcon class="w-4 h-4 inline-block mr-1 " />
+          HTML
+        </li>
+        <li class="text-lg">
+          <CssIcon class="w-4 h-4 inline-block mr-1 " />
+          CSS
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col mx-auto">
+      <h4 class="mb-2 text-2xl text-center font-semibold text-gray-900 dark:text-white">Frameworks</h4>
+      <ul class="max-w-md space-y-1 text-gray-500 dark:text-gray-400 text-center">
+        <li class="text-lg">
+          <ReactIcon class="w-4 h-4 inline-block mr-1 " />
+          React.js
+        </li>
+        <li class="text-lg">
+          <RailsAboutIcon class="w-4 h-4 inline-block mr-1 " />
+          Ruby on Rails
+        </li>
+        <li class="text-lg">
+          <AstroSvgIcon class="w-4 h-4 inline-block mr-1 " />
+          Astro
+        </li>
+        <li class="text-lg">
+          <RspecIcon class="w-4 h-4 inline-block mr-1 " />
+          Rspec
+        </li>
+        <li class="text-lg">
+          <JestIcon class="w-4 h-4 inline-block mr-1 " />
+          Jest
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col mx-auto">
+      <h4 class="mb-2 text-2xl text-center font-semibold text-gray-900 dark:text-white">Skills</h4>
+      <ul class="max-w-md space-y-1 text-gray-500 dark:text-gray-400 text-center">
+        <li class="text-lg">
+          <PostgresIcon class="w-4 h-4 inline-block mr-1 " />
+          Database Management
+        </li>
+        <li class="text-lg">
+          <GitIcon class="w-4 h-4 inline-block mr-1 " />
+          Version Control
+        </li>
+        <li class="text-lg">
+          <BrowserIcon class="w-4 h-4 inline-block mr-1 " />
+          Web Development
+        </li>
+        <li class="text-lg">
+          <PostmanIcon class="w-4 h-4 inline-block mr-1 " />
+          API Design
+        </li>
+        <li class="text-lg">
+          <LinuxIcon class="w-4 h-4 inline-block mr-1 " />
+          CLI
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
