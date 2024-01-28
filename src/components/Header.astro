@@ -1,34 +1,35 @@
 ---
-
 const navItems = [
   {
-    name: 'Home',
-    link: 'home',
-    url: '/'
+    name: "Home",
+    link: "home",
+    url: "/",
   },
   {
-    name: 'Projects',
-    link: 'projects',
-    url: '#projects'
+    name: "Projects",
+    link: "projects",
+    url: "#projects",
   },
   {
-    name: 'About',
-    link: 'about',
-    url: '#about'
+    name: "About",
+    link: "about",
+    url: "#about",
   },
   {
-    name: 'Contact',
-    link: 'contact',
-    url: '#contact'
-  }
-]
+    name: "Contact",
+    link: "contact",
+    url: "#contact",
+  },
+];
 ---
 
-<header class="flex justify-between items-center py-3 sticky top-0 w-full z-10 my-2 px-5 mx-auto md:w-[860px] pt-2 backdrop-blur-md">
-  <img src="/photo.png" alt="karim" class="rounded-full size-12">
+<header
+  class="flex justify-between items-center py-3 sticky top-0 w-full z-10 my-2 px-5 mx-auto md:w-[860px] pt-2 backdrop-blur-md"
+>
+  <img src="/photo.png" alt="karim" class="rounded-full size-12" />
   <nav class="flex flex-row gap-3 opacity-80">
     {
-      navItems.map((item) => 
+      navItems.map((item) => (
         <a
           class="hover:bg-white/10 p-1 rounded-full px-2 sm:px-3 transition ease-in text-sm sm:text-base capitalize"
           aria-label={item.link}
@@ -36,25 +37,25 @@ const navItems = [
         >
           {item.name}
         </a>
-      )
+      ))
     }
   </nav>
 </header>
 
 <script>
-  window.addEventListener('scroll', function() {
-  const sections = document.querySelectorAll('section');
-  const navItems = document.querySelectorAll('nav a');
+  window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("nav a");
 
-  sections.forEach((section, index) => {
-    if (window.scrollY >= section.offsetTop) {
-      navItems.forEach((navItem) => {
-        navItem.classList.remove('highlight');
-      });
-      navItems[index].classList.add('highlight');
-    }
+    sections.forEach((section, index) => {
+      if (window.scrollY >= section.offsetTop) {
+        navItems.forEach((navItem) => {
+          navItem.classList.remove("highlight");
+        });
+        navItems[index].classList.add("highlight");
+      }
+    });
   });
-});
 </script>
 
 <style>
