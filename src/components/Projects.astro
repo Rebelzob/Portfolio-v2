@@ -1,0 +1,126 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import React from "./icons/React.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import LinkButton from "./LinkButton.astro";
+import Ruby from "./icons/Ruby.astro";
+import Rails from "./icons/Rails.astro";
+import Redux from "./icons/Redux.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Web from "./icons/Web.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-[#20232a] text-white",
+    icon: React,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  RUBY: {
+    name: "Ruby",
+    class: "bg-red-600 text-white",
+    icon: Ruby,
+  },
+  RAILS: {
+    name: "Ruby on Rails",
+    class: "bg-red-600 text-white",
+    icon: Rails,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-[#764abc] text-white",
+    icon: Redux,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#7952b3] text-white",
+    icon: Bootstrap,
+  },
+};
+const PROJECTS = [
+  {
+    title:
+      "Appointment Wheels - Car rental app built with React and Ruby on Rails",
+    description:
+      "AppointWheels is a car rental app built with React and Ruby on Rails. This full-stack app enables users to create accounts and rent cars, while admins can create and delete cars.",
+    link: "https://appoint-wheels.onrender.com/",
+    github: "https://github.com/Rysth/REACT-AppointWheels",
+    image: "/appointwheelsv1.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.RAILS, TAGS.REDUX],
+  },
+  {
+    title: "Recipe App - Ruby on Rails and Tailwind CSS",
+    description:
+      "The Recipe App built with Ruby on Rails and Tailwind CSS, explores streamlining the culinary experience. It leverages Rails' robust framework for managing complex data, while Tailwind's flexibility crafts a clean and responsive UI. The app let you create, edit, and delete recipes, as well as add ingredients and create shopping lists.",
+    link: "https://rails-recipe-app.fly.dev/",
+    github: "https://github.com/Rysth/Rails-Recipe-App",
+    image: "/recipeApp.webp",
+    tags: [TAGS.RAILS, TAGS.TAILWIND],
+  },
+  {
+    title: "Space Travelers Hub - React and Redux",
+    description:
+      "This web application provides commercial and scientific space travel services. The app allows users to book rockets and join selected space missions",
+    link: "https://space-travelers-hub-nvit.onrender.com/",
+    github: "https://github.com/ivangonzalez224/Space-Travelers-Hub",
+    image: "/spaceTravelersHub.webp",
+    tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.REDUX],
+  },
+  {
+    title: "Budget Tracker - Ruby on Rails and Tailwind CSS",
+    description:
+      "Budget Tracker is a user-friendly mobile-first budget management application developed with Rails 7, TailwindCSS, and ERB, designed to simplify your financial tracking experience",
+    link: "https://capstone-budget-app-red-sky-6930.fly.dev",
+    github: "https://github.com/Rebelzob/Capstone-Budget-app",
+    image: "/budgetApp.webp",
+    tags: [TAGS.RAILS, TAGS.TAILWIND],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+          {title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`screenshot ${image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Source Code
+            </LinkButton>
+          )}
+          <LinkButton href={link}>
+            <Web class="size-6" />
+            Live
+          </LinkButton>
+        </footer>
+      </article>
+    ))
+  }
+</div>
