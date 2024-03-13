@@ -121,6 +121,7 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thanks to my family members for supporting me during Microverse, and their team.
+For the design idea [Midudev](https://github.com/midudev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
